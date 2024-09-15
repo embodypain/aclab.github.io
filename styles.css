@@ -258,7 +258,22 @@ footer{
     border-radius: 10px;
 }
 
+.MRILink, .exerciseLink, .sideBarTitle{
+    text-decoration: none;
+    color:var(--mainBackgroundColor);
+    margin-left: 5%;
+}
+
+.sideBarTitle{
+    margin-top: -5%;
+}
+
+.sideBarTitle{
+    font-size: x-large;
+}
+
 .sideBar {
+    display: none;
     width: 250px;
     height: calc(100vh + calc(var(--screenHeight) / 8) + 8px);
     background-color: var(--headerFooterColor);
@@ -268,6 +283,11 @@ footer{
     border-bottom: solid;
     border-top: solid;
     border-color: var(--mainBackgroundColor);
-    transition: width 0.5s ease;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
 }
 
+.sideBar.show {
+    transform: translateX(250px); /* Move the sidebar into view */
+}
