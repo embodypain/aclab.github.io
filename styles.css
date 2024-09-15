@@ -1,0 +1,273 @@
+@font-face {
+    font-family: oswald;
+    src: url(fonts/oswald.ttf);
+}
+
+:root{
+    --mainBackgroundColor: #E7F8FF;
+    --headerFooterColor: #5FCAFB;
+    --textColor: #00719B;
+    --inputTextColor: #00AFFF;
+    --inputBoxColor: #8FD9FB;
+    --screenHeight:100vh;
+    --screenWidth:100wh;
+}
+
+
+body{
+    display: flex;
+    flex-direction: column;
+    margin:0;
+    background-color: var(--mainBackgroundColor);
+    font-family: oswald;
+}
+
+.signatureContainer{
+    display: flex;
+    align-items: start;
+    width: 65%;
+}
+
+.tabsContainer{
+    display: flex;
+    justify-content: right;
+    justify-content: space-evenly;
+    width: 35%
+}
+
+.headerContainer{
+    height: calc(var(--screenHeight)/8);
+    width:var(--screenWidth);
+    display: flex;
+    align-content: center;
+    background-color: var(--headerFooterColor);
+    justify-content: center;
+    justify-content: space-between;
+}
+
+.acLabLogo,
+.acLabSignature,
+.researchButton,
+.advocacyButton,
+.personnelButton,
+.participateButton{
+    display: flex;
+    font-family: oswald;
+    align-self: center;
+    font-size: 150%;
+    color: var(--textColor);
+    text-decoration: none;
+}
+
+.acLabSignature{
+    font-size: 200%;
+}
+
+.acLabLogo{
+    height: calc(var(--screenHeight)/10);
+    margin: 10px;
+}
+
+.slideShowContainer{
+    border:solid;
+    height: 87vh;
+}
+
+.brainPic{
+    object-fit: cover;
+}
+
+.slideShow{
+    width: 100px;
+
+}
+
+.contentContainer{
+    height: 87vh;
+    width:100vw;
+    display:flex;
+}
+
+.aboutUsContainer, .whyJoinContainer{
+    width:50vw;
+}
+
+.whyJoinContainer{
+    border-left: solid;
+}
+
+
+footer{
+    height: 100%;
+    max-height: 50vh;
+    background-color: var(--headerFooterColor);
+    display: flex;
+    align-content: center;
+    overflow-y: hidden;
+}
+
+
+.contactUsContainer{
+    display: flex;
+    flex-direction: row;
+    gap: 3%;
+    max-width: 50%;
+}
+
+.contactUs{
+    margin-top: 2px;
+    color: var(--textColor);
+}
+
+.contactUsContainer, .contactUs{
+    margin-left: 1.5%;
+}
+
+.inputInformationContainer, .messageSubmitContainer{
+    margin-top: 5px;
+    max-height: fit-content;
+}
+
+.messageSubmitContainer{
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+
+.name,.email,.phone, .message, .submitButton{
+    background-color: var(--inputBoxColor);
+    font-family: oswald;
+    border-radius: 5px;
+    border: solid;
+    border-color: var(--inputTextColor);
+    border-width: 1px;
+} 
+
+::placeholder{
+    color: var(--textColor);
+}
+
+.name,.email,.phone{
+    height: 5vh;
+    width: 18vw;
+}
+
+.message{
+    height: 18vh;
+    width: 495%;
+}
+
+
+.contactForm{
+    max-height: 18vh;
+}
+
+
+.submitButton{
+    background-color: #00AFFF;
+    color: var(--mainBackgroundColor);
+    width: 500%;
+    cursor: pointer;
+}
+
+.leftFooterContainer{
+    border-right: solid;
+    border-color: var(--mainBackgroundColor);
+    width: 50%;
+    height: 100%;
+    margin-top: 8px;
+    align-self: center;
+}
+
+.rightFooterContainer{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 50%;
+    margin-top: 8px;
+    align-self: center;
+    gap:2.5vh;
+}
+
+.cornellInfoContainer, .cortlandInfoContainer{
+    display: flex;
+    margin-left: 1.5%;
+    gap: 3.5%;
+}
+
+.cornell, .cortland{
+    height: 12vh;
+}
+
+.cornellInfo, .cortlandInfo{
+    color:var(--textColor);
+}
+
+
+.studyText{
+    align-self: center;
+    color: var(--textColor); 
+    font-size: xx-large;   
+    width: 90vw;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.menuTitleContainer{
+    display: flex;
+    max-height: 5vh;
+    margin-top: 5px;
+    justify-content: left;
+}
+
+.menu{
+    max-height: 5vh;
+    max-width: 5vh;
+    color: var(--textColor);
+    cursor: pointer;
+    margin-left: 5px;
+    justify-self: left;
+}
+
+
+.emptyRow{
+    height:3vh;
+}
+
+.MRIContainer, .exerciseContainer{
+    display: flex;
+    margin: 3%;
+    margin-top: -1%;
+    justify-content: center;
+    justify-content: space-between;
+}
+
+.studyContainer{
+    color:var(--textColor);
+}
+
+.MRIName, .exerciseName{
+    font-size: x-large;
+}
+
+.MRIPic, .exercisePic{
+    height: 50vh;
+    border-radius: 10px;
+}
+
+.sideBar {
+    width: 250px;
+    height: calc(100vh + calc(var(--screenHeight) / 8) + 8px);
+    background-color: var(--headerFooterColor);
+    position: absolute;
+    padding-top: 20px; 
+    top: calc(var(--screenHeight) / 8);
+    border-bottom: solid;
+    border-top: solid;
+    border-color: var(--mainBackgroundColor);
+    transition: width 0.5s ease;
+}
+
