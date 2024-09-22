@@ -1,0 +1,55 @@
+{
+  "eventsInformation": [
+    {
+      "title": "1",
+      "date": "2",
+      "location": "3",
+      "text": "4"
+    },
+    {
+      "title": "5",
+      "date": "6",
+      "location": "7",
+      "text": "8"
+    }
+  ],
+  "people": [
+    {
+        "name":"eric",
+        "bio": "you miss 100% of the shots you dont take",
+        "major": "cs",
+        "hometown":"Miami, FL"
+    },
+    {
+        "name":"eric",
+        "bio": "you miss 100% of the shots you dont take",
+        "major": "cs",
+        "hometown":"Miami, FL"
+    },
+    {
+        "name":"eric",
+        "bio": "you miss 100% of the shots you dont take",
+        "major": "cs",
+        "hometown":"Miami, FL"
+    },
+    {
+        "name":"eric",
+        "bio": "you miss 100% of the shots you dont take",
+        "major": "cs",
+        "hometown":"Miami, FL"
+    }
+  ],
+  "research":[
+    {
+        "name":"MRI",
+        "text":"lorem"
+    },
+    {
+        "name":"Exercise",
+        "text":"lorem"
+    },    {
+      "name":"Smoking",
+      "text":"lorem"
+  }
+  ]
+}

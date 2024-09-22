@@ -15,6 +15,7 @@
 
 
 body{
+    overflow-x: hidden;
     display: flex;
     flex-direction: column;
     margin:0;
@@ -99,11 +100,12 @@ body{
 
 footer{
     height: 100%;
-    max-height: 50vh;
+    max-height: 56vh;
     background-color: var(--headerFooterColor);
     display: flex;
     align-content: center;
     overflow-y: hidden;
+    z-index: 1000;
 }
 
 
@@ -111,7 +113,9 @@ footer{
     display: flex;
     flex-direction: row;
     gap: 3%;
+    height: fit-content;
     max-width: 50%;
+    margin-bottom: -4%;
 }
 
 .contactUs{
@@ -119,13 +123,32 @@ footer{
     color: var(--textColor);
 }
 
-.contactUsContainer, .contactUs{
+.contactUsContainer, .contactUs, .invalidInput{
     margin-left: 1.5%;
+}
+
+.contactUsContainer{
+    /* border: solid; */
+    bottom:0%;
+    align-content: flex-start;
+}
+
+.contactUsContainer:last-child{
+    margin: 0;
 }
 
 .inputInformationContainer, .messageSubmitContainer{
     margin-top: 5px;
     max-height: fit-content;
+    width: fit-content;
+}
+/* .inputInformationContainer{
+    border: solid;
+    border-color: red;
+} */
+
+.inputInformationContainer >*:last-child{
+    margin: 0;
 }
 
 .messageSubmitContainer{
@@ -166,7 +189,7 @@ footer{
 
 
 .submitButton{
-    background-color: #00AFFF;
+    background-color: var(--inputTextColor);
     color: var(--mainBackgroundColor);
     width: 500%;
     cursor: pointer;
@@ -179,6 +202,8 @@ footer{
     height: 100%;
     margin-top: 8px;
     align-self: center;
+    display: flex;
+    flex-direction: column;
 }
 
 .rightFooterContainer{
@@ -206,7 +231,7 @@ footer{
 }
 
 
-.studyText{
+.studyText,.advocacyText{
     align-self: center;
     color: var(--textColor); 
     font-size: xx-large;   
@@ -237,8 +262,9 @@ footer{
     height:3vh;
 }
 
-.MRIContainer, .exerciseContainer{
+.research{
     display: flex;
+    flex-direction: column;
     margin: 3%;
     margin-top: -1%;
     justify-content: center;
@@ -258,7 +284,7 @@ footer{
     border-radius: 10px;
 }
 
-.MRILink, .exerciseLink, .sideBarTitle{
+.mriLink, .exerciseLink, .sideBarTitle{
     text-decoration: none;
     color:var(--mainBackgroundColor);
     margin-left: 5%;
@@ -266,16 +292,12 @@ footer{
 
 .sideBarTitle{
     margin-top: -5%;
-}
-
-.sideBarTitle{
     font-size: x-large;
 }
 
 .sideBar {
     display: none;
     width: 250px;
-    height: calc(100vh + calc(var(--screenHeight) / 8) + 8px);
     background-color: var(--headerFooterColor);
     position: absolute;
     padding-top: 20px; 
@@ -286,8 +308,219 @@ footer{
     transition: transform 0.3s ease;
     display: flex;
     flex-direction: column;
+    transform: translateX(-100%);
 }
 
 .sideBar.show {
-    transform: translateX(250px); /* Move the sidebar into view */
+    transform: translateX(250px);
+}
+
+.invalidInput{
+    width: 45%;
+    color:var(--headerFooterColor);
+    font-size: small;
+    position: relative;
+}
+
+.datesContainer, .timeline, .eventsContainer, .eventFront, .eventBack{
+    height:60vh;
+}
+.datesContainer{
+    width: 25%;
+    border-right: solid var(--textColor);
+    border-width: 3px;
+    align-content: center;
+    text-align: right;
+    padding: 5%;
+    color:var(--textColor);
+    font-size: larger;
+}
+
+.eventsContainer{
+    width:75%;
+    border-left: var(--textColor);
+}
+
+.eventsContainer{
+    padding: 5%;
+
+}
+
+.eventFront, .eventBack{
+    width: 90%;
+    border-radius: 10px;
+}
+
+
+.datesContainer{
+    width: 25%;
+    border-left: var(--textColor);
+    align-content: center;
+    text-align: right;
+    padding: 5%;
+    color:var(--textColor);
+    font-size: larger;
+}
+
+.eventsContainer{
+    width:75%;
+    border-right: var(--textColor);
+}
+
+.event{
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+
+}
+
+.datesContainer, .eventsContainer, .event{
+    max-height: 30%;
+}
+
+.eventFront{
+    display: flex;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.eventLeft{
+    width: 50%;
+    height: 100%;
+}
+
+.eventRight{
+    background-color: white;
+    width: 50%;
+    border-radius: 5%;
+    color: var(--textColor);
+}
+
+.eventPic{
+    height: 80%;
+}
+
+.eventTitle, .eventLocation{
+    height: 10%;
+    background-color: var(--textColor);
+    color:var(--mainBackgroundColor);
+    font-size: larger;
+    display: flex;
+    align-items: center;
+    padding-left: 1%;
+}
+
+.eventText{
+    padding: 1%;
+    font-size: larger;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+
+/* 
+{
+    display: flex;
+    flex-direction: column;
+    font-size: calc(var(--headerFontSize));
+    width: 35vw;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    margin-top: 2vh;
+    height: 40vw;
+    background-color: white;
+    border-radius: 20px;
+    border: solid black 3px;
+  } */
+
+  .sidebarLink {
+    text-decoration: none;
+    color: var(--mainBackgroundColor); /* Use your custom color */
+    margin-left: 5%; /* Align with the requested margin */
+    display: block;
+    padding: 10px;
+}
+
+.sidebarLink:hover, .researchButton:hover,
+.advocacyButton:hover,
+.personnelButton:hover,
+.participateButton:hover{
+    color: #ffffff; /* Adjust hover color if needed */
+    background-color: var(--textColor); /* Adjust hover background color */
+    transition: 0.3s;
+}
+
+
+
+/* Personnel Container */
+.personnelContainer {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Grid container for the 3-column layout */
+.gridContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 20px; /* Space between the grid items */
+    width: 80%; /* Width of the grid */
+    margin: 0 auto;
+}
+
+/* Each person element styling */
+.person {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+/* Image container */
+.personImageContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.personImage {
+    border-radius: 10px;
+    height: 150px;
+    width: 120px;
+    object-fit: cover;
+    border: 1px solid #ddd;
+}
+
+/* Personnel Info */
+.personInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.personName {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.personBio {
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.personMajor, .personHometown {
+    font-size: 14px;
+}
+
+.personMajor, .personHometown,.personBio,.personName, .personInfo{
+    color: var(--textColor);
 }

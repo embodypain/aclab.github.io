@@ -12,7 +12,7 @@
                 <a class="acLabLogo" href="index.html">
                     <img src="images/brain.png" class="acLabPic" alt="picture of brain">
                 </a>
-                <a class="acLabSignature" style="color:#f4585a;" href="index.html">
+                <a class="acLabSignature" style="color:var(--mainBackgroundColor); background-color:var(--textColor);" href="index.html">
                     Affect and Cognition
                 Lab
                 </a>
@@ -20,7 +20,7 @@
             <div class="tabsContainer">
                 <a class="researchButton" href="researchScreen.html">Research</a>
                 <a class="advocacyButton" href="advocacyScreen.html">Advocacy</a>
-                <a class="personnelButton" href="personelScreen.html">Personel</a>
+                <a class="personnelButton" href="personnelScreen.html">Personnel</a>
                 <a class="participateButton" href="participateScreen.html">Participate</a>
             </div>
         </div>
@@ -51,8 +51,7 @@
                             type="text"
                             class="name"
                             name="name"
-                            required
-                        >
+                            required>
                         <br>
                         <br>
                         <input
@@ -60,16 +59,14 @@
                             class="email"
                             name="email"
                             placeholder="Email"
-                            required
-                        >
+                            required>
                         <br>
                         <br>
                         <input
                             type="tel"
                             class="phone"
                             name="phone"
-                            placeholder="Phone Number"
-                        >
+                            placeholder="Phone Number">
                         <br>
                         <br>
                     </form>
@@ -81,36 +78,53 @@
                             name="message"
                             rows="4"
                             placeholder="Message"
-                            required
-                        ></textarea>
+                            required></textarea>
                         <br>
                         <br>
                     </form>
-                    <button class="submitButton" type="submit">Submit</button>
+                    <button id="submitButton" class="submitButton"
+                        type="submit">Submit</button>
                 </div>
+                </div>
+                <div id="invalidInput" class="invalidInput"> easter egg
             </div>
         </div>
         <div class="rightFooterContainer">
             <div class="cornellInfoContainer">
                 <div class="cornellLogo">
-                    <img src="images/cornell.png" class="cornell" alt="Cornell Logo">
+                    <img src="images/cornell.png" class="cornell"
+                        alt="Cornell Logo">
                 </div>
                 <div class="cornellInfo">
-                    <div class="cornellName">Cornell University College of Human Ecology</div>
-                    <div class="cornellAddress">37 Forest Home Dr Martha Van Rensselaer Hall, Ithaca, NY 14850</div>
+                    <div class="cornellName">
+                        Cornell University College of Human
+                        Ecology
+                    </div>
+                    <div class="cornellAddress">
+                        37 Forest Home Dr Martha Van
+                        Rensselaer Hall, Ithaca, NY 14850
+                    </div>
                     <div class="cornellPhoneNumber">(607)255-2446</div>
                 </div>
             </div>
             <div class="cortlandInfoContainer">
                 <div class="cortlandLogo">
-                    <img src="images/cortland.png" class="cortland" alt="SUNY Cortland Logo">
+                    <img src="images/cortland.png" class="cortland"
+                        alt="SUNY Cortland Logo">
                 </div>
                 <div class="cortlandInfo">
-                    <div class="cortlandName">State University of New York Cortland</div>
-                    <div class="cortlandAddress">22 Graham Ave, Cortland, NY 13045</div>
+                    <div class="cortlandName">
+                        State University of New York
+                        Cortland
+                    </div>
+                    <div class="cortlandAddress">
+                        22 Graham Ave, Cortland, NY
+                        13045
+                    </div>
                     <div class="cortlandPhoneNumber">(607)753-2011</div>
                 </div>
             </div>
         </div>
     </footer>
+    <script src="script.js"></script>
 </html>
